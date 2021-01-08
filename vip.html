@@ -5,7 +5,7 @@
 <title>vip视频解析工具</title>
 </head>
 <body
-background="https://i.loli.net/2020/03/16/SzqEIel5XJRC2gU.png"
+background="http://fly.atlinker.cn/api/bing/1366.php"
 style=" background-repeat:no-repeat ;
 background-size:100% 100%;
 background-attachment: fixed;">
@@ -19,9 +19,9 @@ background-attachment: fixed;">
               <div class="layui-col-md2">
                 <div class="layui-inline">
                   <select id="interface" lay-verify="">
-                    <option value="0">接口1 【超清播放 | Flash】</option>
-                    <option value="1">接口2 【全网解析】</option>
-                    <option value="2">接口3 【稳定通用】</option>
+                    <option value="0">接口1 </option>
+                    <option value="1">接口2 </option>
+                    <option value="2">接口3 </option>
                   </select>
                 </div>
               </div>
@@ -44,11 +44,9 @@ background-attachment: fixed;">
         <iframe  id="player" src="./ads.html" width="100%"height="100%"allowTransparency="true"allowfullscreen="true"frameborder="0"scrolling="no"></iframe>
         </div>
 <br>
-  <p style="color:white">支持腾讯，优酷，爱奇艺，PPTV, 搜狐，芒果，乐视，M3U8等VIP视频解析! 如果遇到
-视频无法解析的，通知QQ处理！解析仅支持学习交流，勿用非法用途!本站不承担任何
-    责任!</p>
+  <p style="color:white">支持腾讯，优酷，爱奇艺，PPTV, 搜狐，芒果，乐视，M3U8等VIP视频解析! 解析仅支持学习交流，勿用非法用途!本站不承担任何责任!</p>
   <br>
-  <p align="center" style="color:white">Copyright © 2020 SpVip.net</p>
+  <p align="center" style="color:white">Copyright © 2020 </p>
 
 </div>
 <script src="https://www.layuicdn.com/layui/layui.js"></script>
@@ -67,11 +65,11 @@ $(document).ready(function(){
       if(address!=""){
 
          if(itemValue1 == 0){
-             $('#player').attr('src',"https://jx.598110.com/?url="+address);
+             $('#player').attr('src',"https://cdn.yangju.vip/k/?url="+address);
          }else if(itemValue1 == 1){
-             $('#player').attr('src',"http://jx.du2.cc/?url="+address);
+             $('#player').attr('src',"https://jx.lache.me/cc/?url="+address);
          }else if(itemValue1 == 2){
-             $('#player').attr('src',"https://jx.618g.com/?url="+address);
+             $('#player').attr('src',"https://api.653520.top/vip/?url="+address);
          }
       };
   });
