@@ -1,79 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>vip视频解析工具</title>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="视频网站解析大全">
+    <title>视频网站解析大全</title>
+    <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=Raleway:200">
+    <link href="http://cdn.bootcss.com/pure/0.6.0/pure-min.css" rel="stylesheet" />
+	<link href="http://static.demo.ruyo.net/html/css2.css" rel="stylesheet" />
 </head>
-<body
-background="http://fly.atlinker.cn/api/bing/1366.php"
-style=" background-repeat:no-repeat ;
-background-size:100% 100%;
-background-attachment: fixed;">
- 
-<div class="layui-container">
-    <div class="layui-row" style="height:45px">
-    </div>
-  <div class="layui-row">
-        <form class="layui-form" >
-            <div class="layui-form-item">
-              <div class="layui-col-md2">
-                <div class="layui-inline">
-                  <select id="interface" lay-verify="">
-                    <option value="0">接口1 </option>
-                    <option value="1">接口2 </option>
-                    <option value="2">接口3 </option>
-                  </select>
-                </div>
-              </div>
-               <div class="layui-col-md8">
-                  <input type="text" name="address" required  lay-verify="required"  placeholder="全网Vip视频在线解析，输入视频播放地址，如：http://v.youku.com/v_show/id_xxxx" autocomplete="off" class="layui-input">
-               </div>
-              <div class="layui-col-md2">
-
-              <button type="button" class="layui-btn layui-btn-fluid">立即播放</button>
-
-              </div>
-
-          </div>
-        </form>
-  </div>
-
-<!--视频-->
-  <br>
-        <div class="layui-row" style="height:500px">
-        <iframe  id="player" src="./ads.html" width="100%"height="100%"allowTransparency="true"allowfullscreen="true"frameborder="0"scrolling="no"></iframe>
+<body>
+    <div id="main">
+        <div class="header">
+            <h2>视频网站解析大全</h2>
         </div>
-<br>
-  <p style="color:white">支持腾讯，优酷，爱奇艺，PPTV, 搜狐，芒果，乐视等VIP视频解析! 解析仅支持学习交流，勿用非法用途!本站不承担任何责任!</p>
-  <br>
-  <p align="center" style="color:white">Copyright © 2020 </p>
+        <div class="content">
+            <p><small>所有接口皆收集于网络 , 本页面只限测试使用。不保证所有线路都可以使用！<br>该页面可以直接 <code>Ctrl + S</code> 保存到本地离线使用！
+    
+            </small></p>
+           <div class="pure-form">
+				<fieldset>
+					
+					<select id='sel'></select>
+					<input type="text" id="url" size=30 placeholder="视频链接粘贴至此处">
+					<select id='open'>
+						<option value='0'>新页面播放</option>
+						<option value='1'>本页面播放</option>
+					</select>
+					<button class="pure-button pure-button-primary" onclick="play();">点击播放</button>
+				</fieldset>
+			</div>
+		</div>
+     
+        <div class="footer">
+            <div class="legal pure-g">
+                <div class="pure-u-1 u-sm-1-2">
+                    <p class="legal-license">
+                        技术支持: <a href="https://flyingbeta.github.io/FlyingBeta/">FlyingBeta</a>
+                        <br>
+                    </p>
+                </div>
+				<div class="pure-u-1 u-sm-1-2">
+                    <p class="legal-copyright">
+					
+                        This site is built with &lt;3 using Pure v0.6.0
+						<br>
+                        © 2021  All rights reserved.
+                    </p>
+                </div>
+            </div>
+ 
+        </div>
+	<script>
+	var data = [
+		{name:"通用线路1",url:"https://cdn.yangju.vip/k/?url="},
+		{name:"通用线路2",url:"http://jqaaa.com/jx.php?url="},
+		{name:"通用线路3",url:"https://jx.618g.com/?url="},
+		{name:"通用线路4",url:"http://beaacc.com/api.php?url="},
+		{name:"通用线路5",url:"https://jx.lache.me/cc/?url="},
+		{name:"通用线路6",url:"https://api.653520.top/vip/?url="},
+		{name:"通用线路7",url:"https://jx.ab33.top/vip/?url="},
+		{name:"通用线路8",url:"https://vip.mpos.ren/v/?url="},
+		{name:"通用线路9",url:"https://jx.000180.top/jx/?url="},
+		{name:"通用线路10",url:"https://jx.km58.top/jx/?url="},
+		{name:"通用线路11",url:"https://api.smq1.com/?url="},
+		{name:"通用线路12",url:"https://jx.hezeshi.net/ce/jlexi.php?url="},
+		{name:"通用线路13",url:"https://www.kkflv.com/?url="},
+		{name:"通用线路14",url:"https://jx.618g.com/?url=	"},
+		{name:"通用线路15",url:""},
+		{name:"通用线路16",url:""},
+		{name:"通用线路17",url:""},
+		{name:"通用线路18",url:""},
+		{name:"通用线路19",url:""},
+		{name:"通用线路20",url:""},
+		{name:"通用线路21",url:""},
+		{name:"通用线路22",url:""},
+		{name:"通用线路23",url:""},
+		{name:"通用线路24",url:""},
+		{name:"通用线路25",url:""},
+		{name:"通用线路26",url:""},
+		{name:"通用线路27",url:""},
+		{name:"通用线路28",url:""},
 
-</div>
-<script src="https://www.layuicdn.com/layui/layui.js"></script>
-<script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
-<script>
-//一般直接写在一个js文件中
-layui.use(['layer', 'form'], function(){
-  var layer = layui.layer
-  ,form = layui.form;
-  layer.msg('请添加播放地址，无需等待广告结束！！！');
-});
-$(document).ready(function(){
-  $("button").click(function(){
-      var address = $('input[name="address"]').val();
-      var itemValue1 = $("#interface").val();
-      if(address!=""){
-
-         if(itemValue1 == 0){
-             $('#player').attr('src',"https://cdn.yangju.vip/k/?url="+address);
-         }else if(itemValue1 == 1){
-             $('#player').attr('src',"https://jx.lache.me/cc/?url="+address);
-         }else if(itemValue1 == 2){
-             $('#player').attr('src',"https://api.653520.top/vip/?url="+address);
-         }
-      };
-  });
-});
-</script>
-</body>
-</html>
+		];
+	for (var i in  data)
+	{
+		var opt = document.createElement ("option");
+		opt.value = data[i].url;
+		opt.innerText = data[i].name;
+		document.getElementById('sel').appendChild (opt);
+	}
+	
+	function play(){
+		var url = document.getElementById("url").value;
+		if(url.indexOf('http') == -1)
+		{	
+			alert('视频地址不正确！');return;
+		}
+		var api = document.getElementById("sel").value;
+		var open = document.getElementById("open").value;
+		url = api + url;
+		switch(open)
+		{
+			case '0':
+				window.open(url);
+				console.log(0);
+				break;
+			case '1':
+				window.location = url;
+				console.log(1);
+				break;
+ 
+		}
+	}
+	</script>
+</body></html>
