@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7069,15 +7070,6 @@
         }
         /*# sourceMappingURL=app.6d8746688aa3502864cb8098701d1d59.css.map */
     </style>
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?317651c7e90a71c01fb38003634894dc";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
 </head>
 <body class="van-overflow-hidden">
 
@@ -7089,8 +7081,10 @@
                     <td>地点</td>
                     <td>
                         <select name="" id="place">
-                            <option value="3">南院男浴室</option>
                             <option value="1">北院男浴室</option>
+                            <option value="2">北院男浴室</option>
+                            <option value="3">南院男浴室</option>
+                            <option value="4">南院女浴室</option>
                         </select>
                     </td>
                 </tr>
@@ -7104,6 +7098,7 @@
                     <td>时间</td>
                     <td>
                         <select name="" id="time">
+                            <option value=9>17:00 - 17:05</option>
                             <option value=10>17:30 - 17:35</option>
                             <option value=11>18:00 - 18:05</option>
                             <option value=12>18:30 - 18:35</option>
@@ -7130,6 +7125,15 @@
             </table>
         </form>
         <button onclick="submit()">提交</button>
+        <br>
+        <br>
+        <tr>
+            <td>v1.1:增加时间段，新增女浴室支持</td>
+        </tr>
+        <br>
+        <tr>
+            <td>反馈邮箱: flyingbeta@protonmail.com</td>
+        </tr>
     </div>
     <div class="_page2" style="display: none;height: 100%;">
         <div style="position: fixed; top: 0px; right: 0px; left: 0px; bottom: 50px;">
@@ -7502,6 +7506,7 @@
     date = `${y}-${m}-${d}`;
     document.getElementById('date').value = date;
     arr = {
+        9:"17:00 - 17:05",
         10:"17:30 - 17:35",
         11:"18:00 - 18:05",
         12:"18:30 - 18:35",
@@ -7515,8 +7520,12 @@
         place = document.getElementById('place').value;
         if(place==1){
             document.getElementById('_place').innerText = "北院男浴室";
-        }else{
+        }else if(place==2){
+            document.getElementById('_place').innerText = "北院女浴室";
+        }else if(place==3){
             document.getElementById('_place').innerText = "南院男浴室";
+        }else{
+            document.getElementById('_place').innerText = "南院女浴室";
         }
 		
 		person = document.getElementById('person').value;
